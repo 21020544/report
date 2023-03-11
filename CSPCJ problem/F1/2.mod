@@ -15,7 +15,7 @@ tuple Y {
    int _y;
    int data;
 };
-Y y[1..2] = ...;
+Y y[1..4] = ...;
 
 range J = 1..n;
 range M = 1..m;
@@ -57,7 +57,7 @@ subject to {
    		}    	
   	}
   }
-  forall(i in 1..2) { 
+  forall(i in 1..4) { 
     	c7: t[y[i]._x] + p[y[i]._x] <= t[y[i]._y] + B * y[i].data;
     	c8: t[y[i]._y] + p[y[i]._y] <= t[y[i]._x] + B *(1 - y[i].data);
      
